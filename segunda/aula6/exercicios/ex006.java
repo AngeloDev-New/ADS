@@ -2,23 +2,15 @@ import java.util.Scanner;
 public class ex006 {
 	public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Digite o primeiro numero:");
-        double num1 = scan.nextDouble();
-        System.out.println("Digite o segundo numero:");
-        double num2 = scan.nextDouble();
-        System.out.println("Digite o terceiro numero:");
-        double num3 = scan.nextDouble();
-        System.out.println("Digite o quarto numero:");
-        double num4 = scan.nextDouble();
+        
+        System.out.println("Digite o salário do funcionário:");
+        double salario = scan.nextDouble();
 
-        if (num1 > num2 && num1 > num3 && num1 > num4) {
-            System.out.println("O maior numero é: " + num1);
-        } else if (num2 > num3 && num2 > num4) {
-            System.out.println("O maior numero é: " + num2);
-        } else if (num3 > num4) {
-            System.out.println("O maior numero é: " + num3);
+        if (salario < 5000) {
+            double novoSalario = salario * 1.3;
+            System.out.println("O novo salário é: R$ " + novoSalario);
         } else {
-            System.out.println("O maior numero é: " + num4);
+            System.out.println("O salário não é inferior a R$ 5.000,00.");
         }
 	}
 }
